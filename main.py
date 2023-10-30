@@ -1,8 +1,8 @@
-from fastapi import FastAPI
-
-app = FastAPI()
+import gradio as gr
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+def sketch_recognition(img):
+    pass  # Implement your sketch recognition model here...
+
+
+gr.Interface(fn=sketch_recognition, inputs="sketchpad", outputs="label").launch()
