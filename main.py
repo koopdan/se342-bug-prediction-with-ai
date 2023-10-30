@@ -5,6 +5,8 @@ import openai
 from dotenv import load_dotenv
 import os
 
+import streamlit as st
+
 load_dotenv()
 
 
@@ -84,4 +86,20 @@ def get_model_responses(query):
     return model_responses
 
 
-print(get_model_responses("Who is Spiderman?"))
+st.header("Compare AI Tools")
+st.divider()
+query = st.text_input(label="Query")
+button_clicked = st.button("Submit")
+st.divider()
+if button_clicked:
+    with st.spinner("Waiting for responses..."):
+        model_responses = get_model_responses(query)
+
+    st.subheader("Cohere Response")
+    cohere_response = st.text(body=model_responses["cohere"])
+
+    st.subheader("OpenAI Response")
+    cohere_response = st.text(body=model_responses["openai"])
+
+    st.subheader("PALM Response")
+    cohere_response = st.text(body=model_responses["palm"])
