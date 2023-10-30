@@ -1,6 +1,6 @@
 ## LLM's For Testing
 1. <https://makersuite.google.com/app/prompts/new_text>
-2. <https://chat.openai.com/?model=text-davinci-002-render-sha>
+2. <https://platform.openai.com/playground>
 3. <https://dashboard.cohere.com/playground/chat>
 
 ## Chromedriver Download
